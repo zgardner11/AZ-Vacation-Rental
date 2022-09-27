@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cottonwood Vacation Rental</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <script src="JS/main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class = "logo-wrapper">
+            <a href="home.html" class = "logo">Cottonwood Vacation Rental</a>
+        </div>
+        <div class = "burger">
+            <span class = "bar"></span>
+            <span class = "bar" id = "bar2"></span>
+            <span class = "bar"></span>
+        </div>
+        <section class = "navlinks"> 
+            <ul class = "navlinks-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <a href = "book.html" class = "book-button">Check Availability</a>
+            </ul>
+        </section>
+    </nav>
+    <main>
+        <section class="main-wrapper content" id = "home-main">
+            <!-- <article class = "video">
+                <video autoplay muted class="homevid">
+                    <source src="cottonwood.mp4" type="video/mp4"> 
+                </video> 
+            </article>   -->
+            <section class = "content" id =  "content-one">
+                <article>
+                    <header>
+                        <h2>Welcome to your <span class = "home-slogan"> new favorite home away from home.</span></h2>
+                        <h3 class = "home-main-header">Stay on the Verde River & experience all the beauty <span id = "weather">Cottonwood, Arizona</span> has to offer!</h3>
+                    </header>
+                    <div class="main-card-wrapper">
+                        <a href="about.html">
+                            <div class="main-card" id = "main-card-one">
+                                <div id="main-card-img">
+                                    <img src="Images/house.jpg" alt="house">
+                                </div>
+                                <header>
+                                    <h4>House & Amenities</h4>
+                                </header>                            
+                                <p>Our house makes you feel right at home in the heart of Verde Valley. <br><br>Stay along a stretch of the Verde River with convenient access to kayaking, mountain-biking, off-roading and more! </p>
+                            </div>
+                        </a>
+                        <a href="#localattractions">
+                            <div class="main-card" id = "main-card-two">
+                                <div id="main-card-img">
+                                    <img src="Images/flower.jpg" alt="flowers">
+                                </div>  
+                                <header>
+                                    <h4>Local Attractions</h4>
+                                </header>                    
+                                <p>Adventures & activities are limitless in the 30 mile radius of Verde Valley. <br><br> Enjoy the beautiful scenery of Cottonwood and each one of its unique surrounding towns: From the red rocks of Sedona to the gold mines of Jerome, there is something to enjoy for every traveler. </p>
+                            </div>
+                        </a>
+                        <a href="#wine">
+                            <div class="main-card" id = "main-card-three">
+                                <div id="main-card-img">
+                                    <img src="Images/grapes.jpg" alt="grapes">
+                                </div>
+                                <header>
+                                    <h4>Wineries</h4>
+                                </header>   
+                                <p> Feeling thirsty after a full day of outdoor adventures? <br><br> Head down to a local winery in Old Town Cottonwood for a glass of fresh, locally produced wine! </p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </section>
+            <section class = "content" id = "content-two">
+                <article>
+                    <header>
+                        <h3>Explore the surrounding areas and take advantage of mother nature...</h3>
+                    </header>
+                    <div class = "cities-wrapper">
+                        <img src="Images/verdemap.jpg" alt="verdevalleymap" id = "verdemap">
+                        <div class="cities">
+                            <a href="https://www.visitcottonwoodaz.org/">
+                                <div class="main-cities" id = "cottonwood">
+                                    <header>
+                                        <h6>Cottonwood</h6>
+                                    </header>
+                                </div>
+                            </a>
+                            <a href="https://visitsedona.com/">
+                                <div class="main-cities" id = "sedona">
+                                    <header>
+                                        <h6>Sedona</h6>
+                                    </header>
+                                </div>
+                            </a>
+                            <a href="http://azjerome.com/">
+                                <div class="main-cities" id = "jerome">
+                                    <header>
+                                        <h6>Jerome</h6>
+                                    </header>
+                                </div>
+                            </a>
+                            <a href="https://sedonaverdevalley.org/where-to-go/camp-verde/">
+                                <div class="main-cities" id = "campverde">
+                                    <header>
+                                        <h6>Camp Verde</h6>
+                                    </header>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class = "content content-three" id = "wine">
+                <article class="card">
+                    <header class="card-header">
+                        <h3>...then wind down afterwards at a local winery!</h3>
+                        <h5><a href = "Images/map.png" id = "wine-map-click">Click here for a map of the Verde Valley Wine Trail!</a></h5>
+                    </header>
+                    <div class="main-wine-wrapper">
+                        <a href = "https://www.azstronghold.com/">
+                            <div class="main-wine">
+                                <header>
+                                    <h4>Arizona Stronghold Vineyards Tasting Room</h4>
+                                </header>
+                                <div class="main-wine-img">
+                                    <img src="Images/alcantara.jpg" alt="">
+                                </div>
+                                <div class = "main-wine-info">
+                                    <p>(928) 639-2789<br><span class = "wine-info-address">1023 N. Main St. Old Town Cottonwood</span></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "https://burningtreecellars.com/">
+                            <div class="main-wine">
+                                <header>
+                                    <h4>Burning Tree Cellars</h4>
+                                </header>
+                                <img src="Images/cellars.jpg" alt="">
+                                <div class = "main-wine-info">
+                                    <p>(928) 649-8733 <br><span class = "wine-info-address">1040 N. Main St. Old Town Cottonwood</span></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "https://carlsoncreek.com/">
+                            <div class="main-wine">
+                                <header>
+                                    <h4>Carlson Creek Vineyard</h4>
+                                </header>
+                                <img src="Images/grapes.jpg" alt="">
+                                <div class = "main-wine-info">
+                                    <p>(928)-634-3866 <br><span class = "wine-info-address">1010 N. Main St. Cottonwood</span></p>
+                                </div>
+                            </div>
+                        </a>                   
+                        <a href = "https://www.merkinvineyardsosteria.com/">
+                            <div class="main-wine">
+                                <header>
+                                    <h4>Merkin Vineyards Tasting Room & Osteria</h4>
+                                </header>
+                                <img src="Images/wine3.jpg" alt="">
+                                <div class = "main-wine-info">
+                                    <p>(928)-639-1001 <br><span class = "wine-info-address">1001 N. Main St. Old Town Cottonwood</span></p>
+                                </div>
+                            </div>
+                        </a>                      
+                        <a href = "https://www.azsmallbatch.com/">
+                            <div class="main-wine">
+                                <header>
+                                    <h4>Small Batch Wine & Spirits</h4>
+                                </header>
+                                <img src="Images/wine4.jpg" alt="">
+                                <div class = "main-wine-info">
+                                    <p>(928)-634-7678 <br><span class = "wine-info-address">1044 N. Main St. Old Town Cottonwood</span></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "https://www.tantrumwines.com/">
+                            <div class="main-wine">
+                                <header>
+                                    <h4>Tantrum Wines</h4>
+                                </header>
+                                <img src="Images/wine5.jpg" alt="">
+                                <div class = "main-wine-info">
+                                    <p>(928)-634-2266<br><span class = "wine-info-address">918 N Main St., Ste 3 Old Town Cottonwood</span></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href = "https://www.winery101.com/">
+                            <div class="main-wine">
+                                <header>
+                                    <h4>Winery 101</h4>
+                                </header>
+                                <img src="Images/wine9.jpg" alt="">
+                                <div class = "main-wine-info">
+                                    <p> (928)-487-1555 <br><span class = "wine-info-address">1019 N. Main St., Ste. B Old Town Cottonwood</span></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="main-end-book">
+                        <a href = "contact.html" class = "book-button">Check Availability</a>
+                    </div>
+                </article>
+        </section>      
+    </main>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "cottonwood-vacation-rental",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "Pages/JS/payment.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zgardner11/Cottonwood-Vacation-Rental.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zgardner11/Cottonwood-Vacation-Rental/issues"
+  },
+  "homepage": "https://github.com/zgardner11/Cottonwood-Vacation-Rental#readme",
+  "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "@paypal/paypal-js": "^5.0.2",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "promise-polyfill": "8.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "nodemon": "^2.0.15"
+  }
+}

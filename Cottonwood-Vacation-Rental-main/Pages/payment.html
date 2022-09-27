@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cottonwood Vacation Rental</title>
+        <link rel="stylesheet" href="Styles/styles.css">
+        <script src="https://www.paypal.com/sdk/js?client-id=AX-saEjoC772LF4_aIQj4IaldHQ0_IkZIPiduFUBGc1OnNAaWXFwuU1myuFPwSjLHDsjuXyPqs3dI8Xi" defer></script>
+        <!-- <script src = "JS/payment.js" defer></script> -->
+        <script src="JS/main.js" defer></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class = "logo-wrapper">
+                <a href="home.html" class = "logo">Cottonwood Vacation Rental</a>
+            </div>
+                <div class = "burger">
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+                </div>
+            <section class = "navlinks"> 
+                <ul class = "navlinks-menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <a href = "contact.html" class = "book-button">Book now!</a>
+                </ul>
+            </section>
+        </nav>
+        <section class = "book-wrap contact">
+            <article class = "calendar-wrap">
+                <header>
+                    <h3>Choose your availability</h3>
+                </header>
+                <div class="calendar">
+                    <iframe src="https://calendar.google.com/calendar/embed?wkst=1&bgcolor=%23795548&ctz=America%2FLos_Angeles&showNav=1&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&showDate=1&src=M3RoMmpzMmlrY2JnZ2libGEydWFqbTJlazhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000" frameborder="0" scrolling="no"></iframe>  
+                </div>
+            </article>
+            <article class = "payment-wrap">
+                <div class="dates-interested">
+                    
+                        <input type="date" class = "date" >
+                        <input type="date" class = "date">
+      
+                </div>
+                <div class="payment">
+                    <header>
+                        <h2>Book your stay:</h2>
+                        <h3>$375 / night</h3>
+                    </header>     
+                </div>
+                 <div id = "paypal-button-container">
+                </div>
+            </article>
+        </section>
+    </body>
+</html> 
+

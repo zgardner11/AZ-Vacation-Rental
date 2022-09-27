@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" href="Styles/styles.css">
+        <script src="JS/main.js" defer></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class = "logo-wrapper">
+                <a href="home.html" class = "logo">ZG</a>
+            </div>
+            <div class = "burger">
+                <span class = "bar" id = "bar1"></span>
+                <span class = "bar" id = "bar2"></span>
+                <span class = "bar"></span>
+            </div>
+            <section class = "navlinks"> 
+                <ul class = "navlinks-menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </section>
+        </nav>
+        <section class = "contact-main">
+            <header>
+                <h3>Let's get in touch.</h3>
+                <h4>Please fill out the form below and I will respond to your inquiry within 24 hours. Thank you!</h4>
+            </header>
+            <form action = "index.php" method= "POST" id = "contact-form">
+                <p>
+                    <label for = "name">Name*</label>
+                    <input type = "text" class = "contact-name" name = "name">
+                </p>
+                <p>
+                    <label for = "email">Email*</label>
+                    <input type = "email" class = "contact-input" name = "email">
+                </p>
+                <p>
+                    <label for = "service">Please choose the service you are inquring about*</label>
+                    <input type = "text" name = "service">
+                </p>
+                <p>
+                    <label for = "message">How else can I ease your curiosity today?</label>
+                    <textarea name = "message" rows = "4" type = "textarea"></textarea>
+                    <div id="contact-book-button">
+                        <button>
+                            <a id = "book-button">Submit</a>
+                        </button>
+                    </div>
+                </p>
+            </form>
+        </section>
+    </body>
+</html> 
