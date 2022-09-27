@@ -11,7 +11,9 @@ let paypal;
 
 try {
     paypal = await loadScript({ "client-id": "AX-saEjoC772LF4_aIQj4IaldHQ0_IkZIPiduFUBGc1OnNAaWXFwuU1myuFPwSjLHDsjuXyPqs3dI8Xi" });
-} catch (error) {
+} 
+
+catch (error) {
     console.error("failed to load the PayPal JS SDK script", error);
 }
 

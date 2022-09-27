@@ -1,7 +1,4 @@
-
 //Hamburger menu for mobile navigation
-
-// const { render } = require("ejs");
 
 const burger = document.querySelector('.burger');
 const navMenu = document.querySelector('.navlinks-menu');
@@ -12,14 +9,15 @@ burger.addEventListener('click', () => {
 })
 
 // Payment functionality
+
 //(count number of days booked w/ active classes - 1)
 
    // let nightsBooked = '';
      // console.log(nightsBooked);
      
-  let nightsBooked = document.querySelectorAll(".active").length;
-  const rentalRate = 375;
-  const totalPrice = rentalRate * nightsBooked;
+let nightsBooked = document.querySelectorAll(".active").length;
+const rentalRate = 199;
+const totalPrice = rentalRate * 1;
 
 function initPayPalButton() {
     paypal.Buttons({
