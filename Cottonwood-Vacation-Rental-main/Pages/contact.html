@@ -21,7 +21,7 @@
             <section class = "navlinks"> 
                 <ul class = "navlinks-menu">
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" id = "contact-nav">Contact</a></li>
                     <a href = "https://www.airbnb.com/rooms/568115184294392958?source_impression_id=p3_1664261989_JERXImO8pvyH1CBY" class = "book-button">Check Availability</a>
                 </ul>
             </section>
@@ -31,7 +31,8 @@
                 <h3>Let's get in touch.</h3>
                 <h4>Please fill out the form below and I will respond to your inquiry within 24 hours. Thank you!</h4>
             </header>
-            <form action = "index.php" method= "POST" id = "contact-form">
+            <div id="contact-wrapper">
+            <form action = "contactform.php" method= "POST" id = "contact-form">
                 <p>
                     <label for = "name">Name*</label>
                     <input type = "text" class = "contact-name" name = "name">
@@ -49,11 +50,12 @@
                     <textarea name = "message" rows = "4" type = "textarea"></textarea>
                     <div id="contact-book-button">
                         <button>
-                            <a id = "book-button">Submit</a>
+                            <a class = "book-button" name = "submit">Submit</a>
                         </button>
                     </div>
                 </p>
             </form>
+            </div>
         </section>
     </body>
 </html> 

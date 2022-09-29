@@ -20,7 +20,7 @@
     rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.4)
   );
-  --headerfont: 3rem;
+  --headerfont: 2.5rem;
   --largefont: 2rem;
   --mediumfont:1.5rem;
   --smallfont: 1.25rem;
@@ -45,13 +45,12 @@ ul {
 }
 
 h2, h3{
-  font-family: 'Outfit', sans-serif;
   line-height: 1.6;
   text-align: center;
 }
 
 h4{
-  font-family: 'Outfit', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: var(--textfont);
   text-align: center;
   font-weight: 200;
@@ -99,20 +98,22 @@ a:active{   /* emulates pressing of button in 3d space */
   position: relative;
   margin-left: 2rem;
   color: var(--white);
-  font-size: var(--mediumfont);
+  font-size: var(--smallfont);
   padding: 1.5rem;
   font-weight: 100;
   transition: color 500ms ease-out;
 }
 
 .logo:hover{
-  color: rgb(167, 167, 167);
+  color: var(--skyblue);
+  transform: scale(1.5);
 }
 
 .navlinks{
+  font-family: 'Outfit', sans-serif;
   display: flex;
   position: relative;
-  width: 40%;
+  width: 50%;
   right: 0;
   margin-left: auto;
 }
@@ -130,12 +131,13 @@ a:active{   /* emulates pressing of button in 3d space */
 .navlinks li a {
   display: flex;
   color: var(--white);
-  padding: 1rem 2rem;
-  margin: 0 1rem;
+  padding: 1rem;
+  /* margin-right: 2rem; */
   font-weight: 200;
   position: relative;
   justify-content: center;
-  font-size: var(--smallfont);
+  font-size: var(--textfont);
+  border-left: var(--silverblue) solid 1px;
 }
 
 .navlinks li a:hover {
@@ -156,7 +158,7 @@ a:active{   /* emulates pressing of button in 3d space */
 }
 
 .navlinks ul li>a:hover:after {
-  width: 35%;
+  width: 50%;
 }
 
 nav a,
@@ -170,15 +172,15 @@ nav a:before {
   color:aliceblue;
   padding: 1rem 2.5rem;
   height: 3.2rem;
-  font-size: 1.1rem;
-  font-family: serif;
+  font-size: 1rem;
+  font-weight: 300;
   opacity: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   text-overflow: none;
-  border-radius: .7rem;
+  border-radius: 1rem;
   border: var(--skyblue) .5px solid;
   transition: border-radius 500ms ease-out, background-color 420ms ease-out;
 }
@@ -191,7 +193,11 @@ nav a:before {
 }
 
 nav .book-button{
-  margin: auto 7rem auto 2rem;
+  margin: auto 5rem auto 4rem;
+}
+
+#contact-nav{
+  border-right: var(--silverblue) solid 1px;
 }
 
 /* home page */
@@ -256,8 +262,8 @@ nav .book-button{
 }
 
 header > h2{
+  font-family: 'Outfit', sans-serif;
   font-size: var(--headerfont);
-  line-height: 2.2;
   font-weight: 100;
   margin: auto;
   width: fit-content;
@@ -290,7 +296,7 @@ header > h3{
   display: grid;
   flex-wrap: nowrap;
   flex-direction: column;
-  margin: 7rem auto;
+  margin: 5rem auto;
   grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr)); 
   gap: 2rem;
   /* gap: 10rem;  */
@@ -303,8 +309,8 @@ header > h3{
   max-width: 52ch;
   height: fit-content;
   margin: auto;
-  background-color:rgb(213, 230, 245);
-  color:#0f081d;
+  background-color:rgba(207, 233, 255, 0.74);
+  color:var(--wine);
   backdrop-filter: blur(20px);
   border-radius: 4px;
   box-shadow: .5rem 2px .5rem rgba(53, 53, 53, 0.2);
@@ -323,15 +329,14 @@ header > h3{
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   margin: auto;
-  bottom: 15.5rem;
+  bottom: 26.5vh;
   color:aliceblue;
   z-index: 4;
-  min-height: 3.5rem;
+  min-height: 7vh;
   width: 56%;
   background: var(--silverblue); 
-  border: aliceblue solid 1px;
+  border: rgb(225, 241, 255) solid 1px;
   border-radius: .7rem;
 }
 
@@ -339,7 +344,7 @@ header > h3{
   margin: auto;
   position: relative;
   bottom: 2rem;
-  font-size: var(--smallfont);
+  font-size: var(--textfont);
   line-height: 1.5;
   font-weight: 200;
   max-width: 90%;
@@ -471,7 +476,7 @@ article p{
   position: relative;
   bottom: 3.5rem;
   width: 100%;
-  height: 13rem;
+  height: 11rem;
   border-radius: .4rem;
 }
 
@@ -530,6 +535,10 @@ article p{
   background-image: url("Images2/campverde.jpg"); 
 }
 
+#cities-header{
+  color:var(--wine);
+}
+
 .main-cities h6{
   font-size: 1.4rem;
   font-weight: 300;
@@ -551,6 +560,10 @@ article p{
   font-size: 1rem;
   font-weight: 200;
   margin-top: .7rem;
+}
+
+#wine-header{
+  color:aliceblue;
 }
 
 .kayakmap{
@@ -698,20 +711,25 @@ article p{
 /* contact page */
 
 .contact-main{
-  height: fit-content;
+  height: 100vh;
+  /* padding-bottom: 20vh; */
   position: relative;
   margin: auto;
   background: var(--main-bg-color);
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
 }
 
 .contact-main header{
+  height: fit-content;
   max-width: 30%;
   margin: auto;
+  position: relative;
 }
 
 .contact-main h3{
   text-align: start;
-  margin: 0 0 2rem 7%;
+  margin: 0 0 0 7%;
   padding-top: 11%;
   color: aliceblue;
   font-weight: 100;
@@ -720,10 +738,16 @@ article p{
 
 .contact-main h4{
   margin-left: 50%;
+  padding-top: 10%;
   color: rgba(198, 195, 189, 0.889);
   width: 40%;
   font-size: var(--smallfont);
   text-align: end;
+}
+
+#contact-wrapper{
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 form{
@@ -733,7 +757,7 @@ form{
   gap: 2rem;
   width: 80%;
   max-width: 35rem;
-  height: 50rem;
+  height: 44rem;
   padding: 4rem;
   margin: 3vh auto;
   backdrop-filter: blur(2rem);
@@ -773,7 +797,7 @@ form p{
 
 button{
   background: none;
-  border: 4px rgba(255, 255, 255, 0.462) solid;
+  border: 1px rgba(255, 255, 255, 0.462) solid;
   border-radius: 1rem;
 }
 
@@ -789,10 +813,10 @@ button{
 
 /* mobile reponsiveness */
 
-@media only screen and (max-width: 1900px) {
+@media only screen and (max-width: 1300px) {
   
   html{
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     overflow-x: hidden;
   }
 
@@ -810,7 +834,6 @@ button{
 
   h4{
     font-size: .8rem;
-    line-height: 1.2rem;
   }
 
   .navbar {
@@ -1006,15 +1029,18 @@ button{
     width: 70%;
   }
 
-  .contact form{
-    width: 90%;
-    max-width: 40rem;
+  form{
     position: relative;
-    bottom: 3rem;
+    top: 7vh;
   }
 
   .contact-main header{
-    max-width: 100%;
+    max-width: 90%;
+    bottom:0;
+  }
+
+  .contact-main h4{
+    padding-top: 0;
   }
 
 }

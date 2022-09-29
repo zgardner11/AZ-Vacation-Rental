@@ -1,32 +1,35 @@
 <?php 
 
-// first step: check to see if the form was actually filled out correctly and fully
+    $message_sent = false;                                           // Assume message sent condition is false unless the if statement runs
+    if(isset($_POST['email']) && $_POST['email'] != ''){             // first step: check to see if the form was actually filled out
+                                                                    
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){      // check to see if the information was correct
 
-if (isset($_POST['submit'])) {
+            echo 'Thank you for your submission! I will respond to your inquiry within 24 hours.';
 
-    echo "Thank you for your inquiry. I will get in touch with you as soon as I can. Have a beautiful day!";
+            //user input variables contained in form
 
-    //user input variables contained in form
-    
-    $userName = $_POST['name'];
-    $userEmail = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+            $userName = $_POST['name'];
+            $userEmail = $_POST['email'];
+            $subject = $_POST['subject'];
+            $message = $_POST['message'];
 
-    //actions to send their message to my email
+            //actions to send their message to email
 
-    $mailTo = 'zg@movingeyemedia.com'; 
-    $headers = 'From: '.$userEmail;
-    $txt = "You have received an e-mail from ".$name.".\n\n".$message;
+            $to = 'cottonwoodvacationrental@gmail.com'; 
+            $body = "";
 
-    //add error handling here
+            $body .= "From: " .$userName. ".\r\n";
+            $body .= "Email: " .$userEmail. ".\r\n";
+            $body .= "Message: " .$message. ".\r\n";
 
-    //call mail function with user input as parameters
+            //add error handling here
 
-    mail($mailTo, $subject, $txt, $headers);
-    header("Location: contact.php?mailsend");
+            //call mail function with user input as parameters
 
-    mail($userEmail,$subject,$message);
-}
+            mail($to, $subject, $body);
 
+            // header("Location:contact.php?mailsend");
+        }
+    }
 ?>
