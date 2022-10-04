@@ -9,8 +9,8 @@
   --alternate-bg-color: linear-gradient( to bottom, var(--green), aliceblue);
   --wine: rgb(22, 0, 53);
   --orange:rgb(255, 139, 61);
-  --navbar:hsl(19, 90%, 35%);
-  --green: hsl(128, 100%, 14%);
+  --navbar:hsl(19, 99%, 27%);
+  --green: hsl(129, 62%, 10%);
   --white:hsla(192, 10%, 90%, 0.979);
   --lightblue: hsl(197, 38%, 59%);
   --skyblue:hsla(192, 100%, 79%, 0.979);
@@ -20,7 +20,7 @@
     rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.4)
   );
-  --headerfont: 2.5rem;
+  --headerfont: 2.2rem;
   --largefont: 2rem;
   --mediumfont:1.5rem;
   --smallfont: 1.25rem;
@@ -105,8 +105,7 @@ a:active{   /* emulates pressing of button in 3d space */
 }
 
 .logo:hover{
-  color: var(--skyblue);
-  transform: scale(1.5);
+  color: var(--wine);
 }
 
 .navlinks{
@@ -170,11 +169,11 @@ nav a:before {
 .book-button{
   background-color: var(--silverblue);
   color:aliceblue;
-  padding: 1rem 2.5rem;
-  height: 3.2rem;
+  padding: 1rem 2rem;
+  height: 3rem;
+  width: fit-content;
   font-size: 1rem;
   font-weight: 300;
-  opacity: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +186,6 @@ nav a:before {
 
 .book-button:hover{
   background-color: rgb(214, 75, 0);
-  opacity: 100%;
   border-radius: 2rem;
   cursor: pointer;
 }
@@ -600,22 +598,28 @@ article p{
   width: 1rem;
 }
 
-.main-end-book{
+#main-end-book .book-button{
+  /* display: flex; */
   height: fit-content;
-  width: fit-content;
-  min-width: 10rem;
-  margin: 2rem auto;
+  margin: 4rem auto;
 }
 
 /* about page */
 
-.house {
+#house {
   height: min-content;
   width: 100vw;
   background: var(--main-bg-color);
 }
 
-.about-main-wrap {
+#house-header {
+  font-weight: 200;
+  padding: 1.5rem 0;
+  color: aliceblue;
+  font-size: var(--largefont);
+}
+
+#about-main-wrap {
   display: flex;
   width: 90%;
   margin: auto;
@@ -623,16 +627,16 @@ article p{
   /* border: red solid 10px; */
 }
 
-.house-header {
-  width: 90%;
-  text-align: center;
-  color: aliceblue;
-  font-size: var(--largefont);
+#about-main-wrap h3{
+  border-bottom: rgb(208, 208, 208) double 4px;
+  width: 80%;
+  margin: 0 auto 2rem;
+  color: var(--navbar);
 }
 
-.about-main-wrap ul{
+#about-main-wrap ul{
   position: sticky;
-  top: 7rem;
+  top: 8rem;
   font-size: var(--smallfont);
   font-weight: 300;
   margin: 2rem;
@@ -650,7 +654,7 @@ article p{
   border-radius: .7rem 1.4rem;
 }
 
-.house ul li {
+#house ul li {
   margin: 1rem auto;
   color: var(--darkpurple);
   width: 85%;
@@ -664,7 +668,7 @@ article p{
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
   gap: 2rem;
   width: 95%;
-  margin: 3rem auto;
+  margin: 2rem auto;
   border-radius: .4rem;
   background: linear-gradient(
     to bottom,
@@ -672,11 +676,12 @@ article p{
     rgba(255, 255, 255, 0.2)
   );
   padding: 3rem;
+  border: var(--silverblue) solid 1px;
 }
 
 .house-images-wrapper img {
   height: auto;
-  border-radius: .2rem;
+  border-radius: .1rem;
 }
 
 .calendar-wrap {
@@ -732,8 +737,9 @@ article p{
   margin: 0 0 0 7%;
   padding-top: 11%;
   color: aliceblue;
+  font-family: 'Outfit', sans-serif;
   font-weight: 100;
-  font-size: var(--largefont);
+  font-size: var(--mediumfont);
 }
 
 .contact-main h4{
@@ -741,13 +747,13 @@ article p{
   padding-top: 10%;
   color: rgba(198, 195, 189, 0.889);
   width: 40%;
-  font-size: var(--smallfont);
+  font-size: 16px;
   text-align: end;
 }
 
 #contact-wrapper{
   height: 100vh;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 form{
@@ -755,7 +761,7 @@ form{
   grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   grid-auto-rows: fit-content;
   gap: 2rem;
-  width: 80%;
+  width: 90%;
   max-width: 35rem;
   height: 44rem;
   padding: 4rem;
@@ -789,7 +795,7 @@ input, textarea {
 }
 
 form p{
-  width: 90%;
+  width: 100%;
   position: relative;
   margin: auto;
   color: aliceblue;
@@ -806,6 +812,7 @@ button{
   margin: auto;
   display: flex;
   justify-content: center;
+  border-radius: 2rem;
 }
 
 /* payment/availability page*/
@@ -991,9 +998,10 @@ button{
     max-height: 16vh;
   }
 
-  .verdemap{
+  #verdemap{
     margin: 2rem auto;
-    width: 80vw;
+    width: 100%;
+    max-width: 40rem;
     height: auto;
   }
 
@@ -1031,7 +1039,8 @@ button{
 
   form{
     position: relative;
-    top: 7vh;
+    margin-top: 7vh;
+    padding: 2rem;
   }
 
   .contact-main header{
