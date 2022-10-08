@@ -5,8 +5,8 @@
 
 :root{
   --main-bg-color: linear-gradient( to bottom, var(--navbar), aliceblue);
-  --reverse-bg-color: linear-gradient( to top, var(--green), aliceblue);
-  --alternate-bg-color: linear-gradient( to bottom, var(--green), aliceblue);
+  --reverse-bg-color: linear-gradient( to top, var(--silverblue), aliceblue);
+  --alternate-bg-color: linear-gradient( to bottom, var(--silverblue), aliceblue);
   --wine: rgb(22, 0, 53);
   --orange:rgb(255, 139, 61);
   --navbar:hsl(19, 99%, 27%);
@@ -14,7 +14,7 @@
   --white:hsla(192, 10%, 90%, 0.979);
   --lightblue: hsl(197, 38%, 59%);
   --skyblue:hsla(192, 100%, 79%, 0.979);
-  --silverblue:rgb(91, 128, 160);
+  --silverblue:rgb(62, 101, 134);
   --lightgradient: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.2),
@@ -87,7 +87,7 @@ a:active{   /* emulates pressing of button in 3d space */
   align-items: center;
   background-color: var(--navbar);
   color:hsla(192, 10%, 90%, 0.979);
-  height: 8vh;
+  height: 10vh;
   margin-right: auto;
   top: 0;
   z-index: 99999;
@@ -157,7 +157,7 @@ a:active{   /* emulates pressing of button in 3d space */
 }
 
 .navlinks ul li>a:hover:after {
-  width: 50%;
+  width: 33%;
 }
 
 nav a,
@@ -169,8 +169,8 @@ nav a:before {
 .book-button{
   background-color: var(--silverblue);
   color:aliceblue;
-  padding: 1rem 2rem;
-  height: 3rem;
+  padding: 1.5rem 2rem;
+  height: 6vh;
   width: fit-content;
   font-size: 1rem;
   font-weight: 300;
@@ -179,9 +179,9 @@ nav a:before {
   align-items: center;
   position: relative;
   text-overflow: none;
-  border-radius: 1rem;
+  border-radius: .8rem;
   border: var(--skyblue) .5px solid;
-  transition: border-radius 500ms ease-out, background-color 420ms ease-out;
+  transition: border-radius 750ms ease-out, background-color 500ms ease-out;
 }
 
 .book-button:hover{
@@ -203,7 +203,7 @@ nav .book-button{
 .main-wrapper{
   scroll-snap-type: y proximity;
   overflow-y: scroll;
-  height: 92vh;
+  height: 90vh;
 }
 
 .main-wrapper article{
@@ -247,14 +247,12 @@ nav .book-button{
 }
 
 #content-two{
-  display: flex;
   position: relative;
   color: var(--silverblue);
   background: var(--reverse-bg-color);
 }
 
 .content-three{
-  display: flex;
   position: relative;
   background: var(--alternate-bg-color);
 }
@@ -297,9 +295,7 @@ header > h3{
   margin: 5rem auto;
   grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr)); 
   gap: 2rem;
-  /* gap: 10rem;  */
   max-width: 74%;
-  /* border: rgb(200, 1, 200) solid 5px; */
 }
 
 .main-card{
@@ -364,7 +360,7 @@ header > h3{
 }
 
 #main-card-two header, #main-card-two:hover{
-  background: rgb(14, 54, 0);
+  background: var(--green);
   color: aliceblue;
 }
 
@@ -402,7 +398,6 @@ article p{
   max-height: max-content;
   margin: 2rem auto 0;
   width: 70%;
-  /* border: black solid 3px; */
 }
 
 .main-wine{
@@ -453,10 +448,6 @@ article p{
 .main-wine h4{
   font-size: 1rem;
 }
-
-/* .main-wine:nth-child(odd){
-  color:red;
-} */
 
 .main-wine p{
   position: relative;
@@ -599,12 +590,13 @@ article p{
 }
 
 #main-end-book .book-button{
-  /* display: flex; */
   height: fit-content;
+  padding: 1rem 2rem;
   margin: 4rem auto;
 }
 
 /* about page */
+
 
 #house {
   height: min-content;
@@ -676,41 +668,11 @@ article p{
     rgba(255, 255, 255, 0.2)
   );
   padding: 3rem;
-  border: var(--silverblue) solid 1px;
 }
 
 .house-images-wrapper img {
   height: auto;
   border-radius: .1rem;
-}
-
-.calendar-wrap {
-  margin: auto;
-  height: 32vh;
-  width: fit-content;
-  background: var(--lightgradient);
-  padding: 4rem;
-  border-radius: .7rem;
-  border: aliceblue solid 1px;
-}
- 
-.dates-interested {
-  height: 7vh;
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-}
-
-.gradient {
-  position: relative;
-  bottom: 11rem;
-  background: var(--lightgradient);
-  border-radius: .7rem;
-  padding: .5rem 3rem;
-  margin: 2rem auto 0;
-  color: var(--darkpurple);
-  width: fit-content;
-  border: aliceblue solid 1px;
 }
 
 /* contact page */
@@ -753,7 +715,6 @@ article p{
 
 #contact-wrapper{
   height: 100vh;
-  /* scroll-snap-align: start; */
 }
 
 form{
