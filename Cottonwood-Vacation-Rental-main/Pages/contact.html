@@ -9,7 +9,7 @@
         <script src="JS/main.js" defer></script>
     </head>
     <body>
-        <nav class="navbar">
+        <nav id="navbar">
             <div class = "logo-wrapper">
                 <a href="home.html" class = "logo">Cottonwood Vacation Rental</a>
             </div>
@@ -26,6 +26,7 @@
                 </ul>
             </section>
         </nav>
+        <div id="spacer" class="graphic">
         <section class = "contact-main">
             <header>
                 <h3>Let's get in touch.</h3>
@@ -35,15 +36,15 @@
             <form action = "contactform.php" method= "POST" id = "contact-form">
                 <p>
                     <label for = "name">Name*</label>
-                    <input type = "text" class = "contact-name" name = "name">
+                    <input type = "text" class = "contact-name" name = "name" required>
                 </p>
                 <p>
                     <label for = "email">Email*</label>
-                    <input type = "email" class = "contact-input" name = "email">
+                    <input type = "email" class = "contact-input" name = "email" required>
                 </p>
                 <p>
                     <label for = "service">How many nights are you looking to book?</label>
-                    <input type = "text" name = "service">
+                    <input type = "text" name = "service" required>
                 </p>
                 <p>
                     <label for = "message">Anything in particular that you would like to know about the place?</label>
@@ -57,5 +58,6 @@
             </form>
             </div>
         </section>
+        </div>
     </body>
 </html> 

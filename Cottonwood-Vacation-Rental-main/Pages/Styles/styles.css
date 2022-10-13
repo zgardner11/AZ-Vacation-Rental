@@ -7,12 +7,14 @@
   --main-bg-color: linear-gradient( to bottom, var(--navbar), aliceblue);
   --reverse-bg-color: linear-gradient( to top, var(--silverblue), aliceblue);
   --alternate-bg-color: linear-gradient( to bottom, var(--silverblue), aliceblue);
-  --wine: rgb(22, 0, 53);
+  --wine: #160035;
   --orange:rgb(255, 139, 61);
-  --navbar:hsl(19, 99%, 27%);
-  --green: hsl(129, 62%, 10%);
+  --navbar:#892c01;
+  /*  */
+  /* 652000 */
+  --green: #0a290e;
   --white:hsla(192, 10%, 90%, 0.979);
-  --lightblue: hsl(197, 38%, 59%);
+  --lightblue: #6fa8be;
   --skyblue:hsla(192, 100%, 79%, 0.979);
   --silverblue:rgb(62, 101, 134);
   --lightgradient: linear-gradient(
@@ -80,14 +82,15 @@ a:active{   /* emulates pressing of button in 3d space */
 
 /* navigation */
 
-.navbar {
+#navbar {
   display: flex;
   position: sticky;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: var(--navbar);
   color:hsla(192, 10%, 90%, 0.979);
-  height: 10vh;
+  height: 8vh;
   margin-right: auto;
   top: 0;
   z-index: 99999;
@@ -201,14 +204,16 @@ nav .book-button{
 /* home page */
 
 .main-wrapper{
-  scroll-snap-type: y proximity;
+  /* scroll-snap-type: y proximity; */
   overflow-y: scroll;
-  height: 90vh;
+  height: 92vh;
 }
 
 .main-wrapper article{
-  scroll-snap-align:start;
+  /* scroll-snap-align:start; */
   min-height: fit-content;
+  max-height: 63em;
+  /* border: black solid 3px; */
 }
 
 .video {
@@ -268,7 +273,6 @@ header > h2{
 
 header > h3{
   position: relative;
-  text-align: center;
   font-size: var(--mediumfont);
   line-height: 2;
   font-weight: 400;
@@ -283,10 +287,10 @@ header > h3{
 
 /* add weather API integration for current weather of cottonwood */
 
-#weather:hover {
+/* #weather:hover {
   border-bottom: 1px solid aliceblue;
   cursor: pointer;
-}
+} */
 
 .main-card-wrapper{
   display: grid;
@@ -367,6 +371,30 @@ header > h3{
 #main-card-three header, #main-card-three:hover{
   background: var(--wine);
   color: aliceblue;
+}
+
+.spacer{
+  aspect-ratio: 3840/2560;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.graphic{
+  background-image: url('Images2/wave6.svg');
+}
+
+.graphic2{
+  background-image: url('Images2/wave22.svg');
+}
+
+.graphic3{
+  background-image: url('Images2/wave24.svg');
+}
+
+.graphic4{
+  background-image: url('Images2/2.svg');
 }
 
 .main-img-map{
@@ -470,9 +498,10 @@ article p{
 }
 
 .cities-wrapper{
+  padding-top: 7rem;
   display: flex;
   margin: auto;
-  max-width: 90vw;
+  max-width: 70vw;
   min-height: min-content;
 }
 
@@ -485,7 +514,7 @@ article p{
   width: 45vw;
   text-align: center;
   align-items: center;
-  margin: auto 2rem;
+  margin: auto;
 }
 
 .main-cities{
@@ -495,7 +524,7 @@ article p{
     var(--silverblue),
     rgba(255, 255, 255, 0.7)
   );
-  height: 30vh;
+  height: 25vh;
   background-size: cover;
   border-radius: .4rem;
   border: aliceblue solid 1px;
@@ -525,7 +554,10 @@ article p{
 }
 
 #cities-header{
-  color:var(--wine);
+  position: relative;
+  right: 25%;
+  bottom: 2%;
+  color:aliceblue;
 }
 
 .main-cities h6{
@@ -678,13 +710,9 @@ article p{
 /* contact page */
 
 .contact-main{
-  height: 100vh;
-  /* padding-bottom: 20vh; */
+  height: fit-content;
   position: relative;
   margin: auto;
-  background: var(--main-bg-color);
-  scroll-snap-type: y proximity;
-  overflow-y: scroll;
 }
 
 .contact-main header{
@@ -731,11 +759,13 @@ form{
   box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
   border: 4px rgba(255, 255, 255, 0.155) solid;
   border-radius: 1rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 100;
 }
 
 label{
   font-size: var(--smallfont);
-  font-weight: 300;
+  /* font-weight: 300; */
 } 
 
 input, textarea {
@@ -748,6 +778,10 @@ input, textarea {
   border-radius: .4rem .2rem;
   background: transparent;
   font-size: 1rem;
+}
+
+input:required:focus{
+  border: rgb(168, 0, 0) solid 3px;
 }
 
 .contact-date{
