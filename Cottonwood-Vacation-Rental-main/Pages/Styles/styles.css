@@ -8,13 +8,12 @@
   --reverse-bg-color: linear-gradient( to top, var(--silverblue), aliceblue);
   --alternate-bg-color: linear-gradient( to bottom, var(--silverblue), aliceblue);
   --wine: #160035;
-  --orange:rgb(255, 139, 61);
+  --wine2:#0c001e;
+  --orange:#652000;
   --navbar:#892c01;
-  /*  */
-  /* 652000 */
-  --green: #0a290e;
+  --green: #001e04;
   --white:hsla(192, 10%, 90%, 0.979);
-  --lightblue: #6fa8be;
+  --lightblue: #6fa8be;  
   --skyblue:hsla(192, 100%, 79%, 0.979);
   --silverblue:rgb(62, 101, 134);
   --lightgradient: linear-gradient(
@@ -40,6 +39,7 @@ body {
   font-weight: 100;
   line-height: 1.5;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -61,6 +61,10 @@ h4{
 h5{
   padding: 2rem;
   text-align: center;
+}
+
+p{
+  line-height: 1.6;
 }
 
 img {
@@ -192,7 +196,11 @@ nav a:before {
   border-radius: 2rem;
   cursor: pointer;
 }
-
+.book-button.active{
+  background-color: rgb(214, 75, 0);
+  border-radius: 2rem;
+  cursor: pointer;
+}
 nav .book-button{
   margin: auto 5rem auto 4rem;
 }
@@ -204,15 +212,15 @@ nav .book-button{
 /* home page */
 
 .main-wrapper{
-  /* scroll-snap-type: y proximity; */
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
   height: 92vh;
 }
 
 .main-wrapper article{
-  /* scroll-snap-align:start; */
-  min-height: fit-content;
-  max-height: 63em;
+  scroll-snap-align:start;
+  max-height: 600px;
+  /* max-height: 60em; */
   /* border: black solid 3px; */
 }
 
@@ -374,7 +382,7 @@ header > h3{
 }
 
 .spacer{
-  aspect-ratio: 3840/2560;
+  aspect-ratio: 900/600;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -382,19 +390,23 @@ header > h3{
 }
 
 .graphic{
-  background-image: url('Images2/wave6.svg');
+  background-image: url('Images2/wave44.svg');
 }
 
 .graphic2{
-  background-image: url('Images2/wave22.svg');
+  background-image: url('Images2/wave40.svg');
 }
 
 .graphic3{
-  background-image: url('Images2/wave24.svg');
+  background-image: url('Images2/wave41.svg');
 }
 
 .graphic4{
-  background-image: url('Images2/2.svg');
+  background-image: url('Images2/wave50.svg');
+}
+
+.graphic5{
+  background-image: url('Images2/wave50.svg');
 }
 
 .main-img-map{
@@ -406,7 +418,6 @@ header > h3{
 article p{
   width: 100%;
   font-size: var(--smallfont);
-  line-height: 1.3;
   position: relative;
 }
 
@@ -498,11 +509,14 @@ article p{
 }
 
 .cities-wrapper{
-  padding-top: 7rem;
+  /* padding-top: 2rem; */
+  position: relative;
+  top: 4rem;
   display: flex;
-  margin: auto;
-  max-width: 70vw;
-  min-height: min-content;
+  margin: 4rem auto;
+  max-width: 85vw;
+  height: fit-content;
+  /* border: red solid 3px; */
 }
 
 .cities{
@@ -529,7 +543,7 @@ article p{
   border-radius: .4rem;
   border: aliceblue solid 1px;
   transition: ease-in-out border-radius 400ms, opacity 500ms ease-in-out;
-  color: aliceblue;
+  color: var(--navbar);
 }
 
 .main-cities:hover{
@@ -553,16 +567,28 @@ article p{
   background-image: url("Images2/campverde.jpg"); 
 }
 
-#cities-header{
+#cities-header h3{
+  font-family: 'Outfit', sans-serif;
+  /* font-size: var(--mefont); */
+  font-weight: 100;
   position: relative;
   right: 25%;
-  bottom: 2%;
+  top: 7vh;
   color:aliceblue;
 }
 
 .main-cities h6{
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   font-weight: 300;
+  position: relative;
+  /* bottom: 8rem; */
+  margin: auto;
+}
+
+/* section 3 */
+
+#wine{
+  max-height: min-content;
 }
 
 #wine-map-click{
@@ -598,10 +624,10 @@ article p{
 }
 
 #verdemap{
-  margin: 2rem 4rem;
-  max-height: 74vh;
+  margin-right: 2rem;
+  margin-bottom: 7rem;
+  max-height: 80vh;
   width: auto;
-  border: 1px solid rgb(1, 77, 1);
   border-radius: .7rem;
 }
 
@@ -802,7 +828,7 @@ button{
   border-radius: 1rem;
 }
 
-#contact-book-button{
+#contactbutton{
   width: 100%;
   margin: auto;
   display: flex;
@@ -810,12 +836,111 @@ button{
   border-radius: 2rem;
 }
 
+#contactbutton.bookpage{
+  /* border: red solid 3px; */
+  margin: 3rem auto 2rem;
+}
+
+#bookdisclaimer{
+  /* padding-top: 1rem; */
+  /* border: black solid 3px; */
+  font-size: 14px;
+}
+
 /* payment/availability page*/
 
+#book-wrap{
+  border-top: rgba(208, 208, 208, 0.916) 1px solid;
+  display: flex;
+  justify-content: center;
+  height: 92vh;
+  /* margin: 0 2rem; */
+}
 
-/* mobile reponsiveness */
+#book{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  height: fit-content;
+  max-height: 34rem;
+  width: 22%;
+  margin: auto;
+  background:linear-gradient(to bottom, rgba(105, 184, 254, 0.633), rgba(255, 255, 255, 0.841));
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
+  border: rgb(189, 210, 225) solid 4px;
+  border-radius: 1rem;
+  /* width: 100%; */
+}
 
-@media only screen and (max-width: 1300px) {
+#calendar{
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0 0 7rem;
+  width: 75vw;
+  max-width: 50rem;
+  height: 74vh;
+}
+
+#calendar iframe{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(to bottom, #69b8fea1, rgba(255, 255, 255, 0.841));
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
+  border: rgb(189, 210, 225) solid 2px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#date-selection{
+  display: flex;
+  flex-direction: column;
+}
+
+#date-selection div{
+  margin: 1rem auto 0;
+}
+
+#dates-interested h2{
+  color:white;
+}
+
+#dates-interested h3{
+  color:var(--navbar);
+}
+
+.date{
+  text-align: center;
+  color: aliceblue;
+}
+
+#calendar-wrap h3{
+  color: aliceblue;
+  font-size: 24px;
+  position: relative;
+  top: 2rem;
+  left: 4rem;
+}
+
+.calendardesktop{
+  display: flex;
+}
+
+.calendarmobile{
+  display: none;
+}
+
+/* tablet responsiveness */
+
+/* @media all and (min-width:768px) and (max-width:1300px){
+} */
+/* mobile responsiveness */
+
+@media only screen and (max-width: 767px) {
   
   html{
     /* overflow-y: hidden; */
@@ -999,7 +1124,10 @@ button{
     max-width: 40rem;
     height: auto;
   }
-
+  #cities-header h3{
+    top: 0;
+    right:0;
+  }
   .cities-wrapper{
     display: flex;
     flex-direction: column;
@@ -1045,6 +1173,44 @@ button{
 
   .contact-main h4{
     padding-top: 0;
+  }
+
+  .spacer{
+    aspect-ratio: 420/1080;
+  }
+
+  #calendar{
+    margin: auto;
+    width: 90%;
+    margin: auto;
+  }
+
+  .calendardesktop{
+    display: none;
+  }
+
+  .calendarmobile{
+    display:block;
+  }
+
+  #book-wrap{
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+  }
+
+  #book{
+    margin: 2rem auto;
+    width: 90%;
+  }
+
+  #calendar-wrap h3{
+    font-size: 24px;
+    position: relative;
+    padding: 0;
+    margin: 2rem auto;
+    top: 0;
+    left: 0;
   }
 
 }

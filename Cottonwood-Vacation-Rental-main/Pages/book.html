@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cottonwood Vacation Rental</title>
-    <link rel="stylesheet" href="Styles/styles.css">
-    <script src="https://www.paypal.com/sdk/js?client-id=AX-saEjoC772LF4_aIQj4IaldHQ0_IkZIPiduFUBGc1OnNAaWXFwuU1myuFPwSjLHDsjuXyPqs3dI8Xi&enable-funding=venmo&disable-funding=paylater&currency=USD" data-sdk-integration-source="button-factory" defer></script>
-    <script src="JS/main.js" defer></script>     
-  </head>
-  <body>
-    <nav id="navbar">
-      <div class = "logo-wrapper">
-          <a href="home.html" class = "logo">Cottonwood Vacation Rental</a>
-      </div>
-      <div class = "burger">
-          <span class = "bar"></span>
-          <span class = "bar" id = "bar2"></span>
-          <span class = "bar"></span>
-      </div>
-      <section class = "navlinks"> 
-        <ul class = "navlinks-menu">
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <a href = "https://www.airbnb.com/rooms/568115184294392958?source_impression_id=p3_1664261989_JERXImO8pvyH1CBY" class = "book-button">Check Availability</a>
-      </ul>
-      </section>
-  </nav>
-    <section id = "book-wrap">
-      <article class="calendar-wrap">
-        <header>
-          <h3 class = "gradient">Choose your availability</h3>
-        </header>  
-        <div class="airbnb-embed-frame" data-id="568115184294392958" data-view="home" style="width:450px;height:300px;margin:auto"><a href="https://www.airbnb.com/rooms/568115184294392958?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">View On Airbnb</a><a href="https://www.airbnb.com/rooms/568115184294392958?guests=1&amp;amp;adults=1&amp;amp;s=66&amp;amp;source=embed_widget" rel="nofollow">River-front, 2 bedroom vacation rental near Sedona</a><script async="" src="https://www.airbnb.com/embeddable/airbnb_jssdk"></script></div>
-      </article>
-      <div class = "payment-wrap">
-        <div class="payment">
-          <header>
-            <h2>Book your stay!</h2>
-            <h3>$375/ night</h3>
-          </header>
-        </div>
-        <div id="smart-button-container">
-         <div style="text-align: end;">
-           <div id="paypal-button-container"></div>
-         </div>
-        </div>
-      </div>
-    </section>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cottonwood Vacation Rental</title>
+        <link rel="stylesheet" href="Styles/styles.css">
+        <script src = "JS/payment.js" defer></script>
+        <script src="JS/main.js" defer></script>
+    </head>
+    <body>
+        <nav id="navbar">
+            <div class = "logo-wrapper">
+                <a href="index.html" class = "logo">Cottonwood Vacation Rental</a>
+            </div>
+            <div class = "burger">
+                <span class = "bar"></span>
+                <span class = "bar" id = "bar2"></span>
+                <span class = "bar"></span>
+            </div>
+            <section class = "navlinks"> 
+                <ul class = "navlinks-menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" id = "contact-nav">Contact</a></li>
+                    <a href = "book.html" class = "book-button active">Check Availability</a>
+                </ul>
+            </section>
+        </nav>
+        <section id = "book-wrap" class = "spacer graphic2">
+            <article id = "calendar-wrap">
+                <header>
+                    <h3>Availability</h3>
+                </header>
+                <div id = "calendar">
+                    <div class="calendardesktop">
+                        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%237786a3&ctz=America%2FLos_Angeles&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showTitle=0&src=M3RoMmpzMmlrY2JnZ2libGEydWFqbTJlazhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                    <div class="calendarmobile">
+                       <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%237786a3&ctz=America%2FLos_Angeles&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showTitle=0&src=M3RoMmpzMmlrY2JnZ2libGEydWFqbTJlazhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </article>
+            <article id = "book">
+                <div id = "dates-interested">
+                    <header>
+                        <h2>Book your stay:</h2>
+                        <h3>$199/night</h3>
+                    </header> 
+                    <div id = "date-selection">
+                        <input type="date" class = "date">
+                        <div>through</div>
+                        <input type="date" class = "date">
+                    </div>
+                    <div id="contactbutton" class = "bookpage">
+                        <a href = "book.html" class = "book-button">Reserve Now</a>
+                    </div>
+                    <p id = "bookdisclaimer">*You will not be charged anything at this time. This sends us an email with your reservation dates and we will contact you directly for secure payment. Thank you!</p>
+                </div>
+            </article>
+        </section>
+    </body>
 </html> 
 
