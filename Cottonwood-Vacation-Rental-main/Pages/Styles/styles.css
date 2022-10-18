@@ -150,6 +150,10 @@ a:active{   /* emulates pressing of button in 3d space */
   color:aliceblue;
 }
 
+.navlinks li a:hover {
+  color:aliceblue;
+}
+
 .navlinks li a:after {
   position: absolute;
   bottom: 0;
@@ -394,7 +398,7 @@ header > h3{
 }
 
 .graphic2{
-  background-image: url('Images2/wave40.svg');
+  background-image: url('Images2/tabletwave.svg');
 }
 
 .graphic3{
@@ -402,7 +406,7 @@ header > h3{
 }
 
 .graphic4{
-  background-image: url('Images2/wave50.svg');
+  background-image: url('Images2/section3.svg');
 }
 
 .graphic5{
@@ -611,6 +615,7 @@ article p{
 
 #wine-header{
   color:aliceblue;
+  margin: 0 auto 10rem;
 }
 
 .kayakmap{
@@ -663,8 +668,7 @@ article p{
 }
 
 #house-header {
-  font-weight: 200;
-  padding: 1.5rem 0;
+  padding: 1.5rem;
   color: aliceblue;
   font-size: var(--largefont);
 }
@@ -729,6 +733,7 @@ article p{
 }
 
 .house-images-wrapper img {
+  /* width: 50%; */
   height: auto;
   border-radius: .1rem;
 }
@@ -829,11 +834,8 @@ button{
 }
 
 #contactbutton{
-  width: 100%;
-  margin: auto;
   display: flex;
   justify-content: center;
-  border-radius: 2rem;
 }
 
 #contactbutton.bookpage{
@@ -850,10 +852,9 @@ button{
 /* payment/availability page*/
 
 #book-wrap{
-  border-top: rgba(208, 208, 208, 0.916) 1px solid;
   display: flex;
   justify-content: center;
-  height: 92vh;
+  height: fit-content;
   /* margin: 0 2rem; */
 }
 
@@ -862,9 +863,10 @@ button{
   flex-direction: column;
   padding: 3rem;
   height: fit-content;
-  max-height: 34rem;
+  /* max-height: 34rem; */
   width: 22%;
-  margin: auto;
+  max-width: 25rem;
+  margin: 2rem auto 0;
   background:linear-gradient(to bottom, rgba(105, 184, 254, 0.633), rgba(255, 255, 255, 0.841));
   backdrop-filter: blur(2rem);
   box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
@@ -896,14 +898,14 @@ button{
   padding: 1rem;
 }
 
-#date-selection{
+/* #date-selection{
   display: flex;
   flex-direction: column;
 }
 
 #date-selection div{
-  margin: 1rem auto 0;
-}
+  margin: auto;
+} */
 
 #dates-interested h2{
   color:white;
@@ -914,8 +916,13 @@ button{
 }
 
 .date{
+  margin: 1rem auto 0;
   text-align: center;
   color: aliceblue;
+}
+
+.dateend{
+  margin: 1rem auto 0;
 }
 
 #calendar-wrap h3{
@@ -934,13 +941,25 @@ button{
   display: none;
 }
 
+#dash{
+  color: var(--navbar);
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+}
+
+#email-book{
+  /* border: black solid 2px; */
+  margin: 2rem auto;
+}
+
 /* tablet responsiveness */
 
 /* @media all and (min-width:768px) and (max-width:1300px){
 } */
 /* mobile responsiveness */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1400px) {
   
   html{
     /* overflow-y: hidden; */
@@ -1175,10 +1194,6 @@ button{
     padding-top: 0;
   }
 
-  .spacer{
-    aspect-ratio: 420/1080;
-  }
-
   #calendar{
     margin: auto;
     width: 90%;
@@ -1196,7 +1211,6 @@ button{
   #book-wrap{
     flex-direction: column;
     width: 100%;
-    height: fit-content;
   }
 
   #book{
@@ -1211,6 +1225,42 @@ button{
     margin: 2rem auto;
     top: 0;
     left: 0;
+  }
+
+  #dates-interested h3{
+    padding: 1em;
+  }
+  
+  /* about page */
+
+  #about-main-wrap{
+    flex-direction: column;
+  }
+
+  #about-main-wrap ul{
+    position: sticky;
+    top: 8rem;
+    font-size: var(--smallfont);
+    font-weight: 300;
+    margin: 1rem auto;
+    line-height: 1.6;
+    width: 90%;
+    height: fit-content;
+    padding: 1rem;
+  }
+
+  #about-main-wrap h3{
+    padding: 1rem;
+  }
+
+  .house-images-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    gap: 2rem;
+    margin: auto;
+    padding: 2rem 1rem;
+    max-width: 40em;
   }
 
 }

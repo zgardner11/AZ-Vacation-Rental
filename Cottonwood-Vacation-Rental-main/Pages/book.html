@@ -47,10 +47,18 @@
                         <h2>Book your stay:</h2>
                         <h3>$199/night</h3>
                     </header> 
-                    <div id = "date-selection">
+                    <div class = "date-selection">
+                        <div id="name-book">
+                            <label for="name">Name</label>
+                            <input type="text">
+                        </div>
+                        <div id="email-book">
+                            <label for="email">Email</label>
+                            <input type="email">
+                        </div>
                         <input type="date" class = "date">
-                        <div>through</div>
-                        <input type="date" class = "date">
+                        <div id = "dash">-</div>
+                        <input type="date" class = "date dateend">
                     </div>
                     <div id="contactbutton" class = "bookpage">
                         <a href = "book.html" class = "book-button">Reserve Now</a>
