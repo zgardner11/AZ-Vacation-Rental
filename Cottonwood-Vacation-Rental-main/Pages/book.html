@@ -48,22 +48,26 @@
                         <h3>$199/night</h3>
                     </header> 
                     <div class = "date-selection">
+                        <form action="">
                         <div id="name-book">
-                            <label for="name">Name</label>
-                            <input type="text">
+                            <label for="name" class = "form-entry">Name</label>
+                            <input type="text" name = "name" required>
                         </div>
-                        <div id="email-book">
+                        <div id="email-book" class = "form-entry">
                             <label for="email">Email</label>
-                            <input type="email">
+                            <input type="email" name = "email" required>
                         </div>
-                        <input type="date" class = "date">
-                        <div id = "dash">-</div>
-                        <input type="date" class = "date dateend">
+                        <div id = "date-book" class="form-entry">
+                            <input type="date" class = "date">
+                            <div id = "dash">-</div>
+                            <input type="date" class = "date dateend">
+                        </div>
                     </div>
                     <div id="contactbutton" class = "bookpage">
                         <a href = "book.html" class = "book-button">Reserve Now</a>
                     </div>
                     <p id = "bookdisclaimer">*You will not be charged anything at this time. This sends us an email with your reservation dates and we will contact you directly for secure payment. Thank you!</p>
+                    </form>
                 </div>
             </article>
         </section>

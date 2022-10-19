@@ -15,7 +15,7 @@
   --white:hsla(192, 10%, 90%, 0.979);
   --lightblue: #6fa8be;  
   --skyblue:hsla(192, 100%, 79%, 0.979);
-  --silverblue:rgb(62, 101, 134);
+  --silverblue:#3e6586;
   --lightgradient: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.2),
@@ -144,10 +144,6 @@ a:active{   /* emulates pressing of button in 3d space */
   justify-content: center;
   font-size: var(--textfont);
   border-left: var(--silverblue) solid 1px;
-}
-
-.navlinks li a:hover {
-  color:aliceblue;
 }
 
 .navlinks li a:hover {
@@ -316,7 +312,7 @@ header > h3{
 
 .main-card{
   min-width: min-content;
-  max-width: 52ch;
+  max-width: 25em;
   height: fit-content;
   margin: auto;
   background-color:rgba(207, 233, 255, 0.74);
@@ -445,31 +441,26 @@ article p{
 
 .main-wine{
   position: relative;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.9)
-  );
-  backdrop-filter: blur(20px);
+  background-color: aliceblue;
   margin: auto;
   width: 90%;
   height: 20rem;
   row-gap: 5rem;
-  box-shadow: 0 .1rem 1rem rgba(146, 58, 0, 0.377);
-  transition: background-color 750ms ease-in-out;
+  box-shadow: 0 .1rem .4rem rgba(255, 255, 255, 0.631);
+  transition: background-color 500ms ease-in-out;
   z-index: 2;
   border-radius: 1rem;
   border: aliceblue solid 1px;
 }
 
 .main-wine:hover{
-  background-color: var(--wine);
+  background: var(--wine);
   color: white;
 }
 
 .main-wine:hover p{
   color: aliceblue;
-  transition: color 500ms ease-out;
+  transition: color 750ms ease-in-out;
 }
 
 .main-wine header{
@@ -478,7 +469,7 @@ article p{
   justify-content: center;
   position: relative;
   bottom: 1.1rem;
-  padding: 1rem 4rem;
+  padding: 1rem;
   background: var(--wine); 
   min-height: 3rem;
   width: 100%;
@@ -527,7 +518,7 @@ article p{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-auto-rows: 30vh;
-  gap: 2rem;
+  gap: 2em 4em;
   height: fit-content;
   width: 45vw;
   text-align: center;
@@ -547,7 +538,6 @@ article p{
   border-radius: .4rem;
   border: aliceblue solid 1px;
   transition: ease-in-out border-radius 400ms, opacity 500ms ease-in-out;
-  color: var(--navbar);
 }
 
 .main-cities:hover{
@@ -571,22 +561,33 @@ article p{
   background-image: url("Images2/campverde.jpg"); 
 }
 
+#sedona, #campverde{
+  position: relative;
+  bottom: 6rem;
+}
+
 #cities-header h3{
   font-family: 'Outfit', sans-serif;
-  /* font-size: var(--mefont); */
   font-weight: 100;
   position: relative;
   right: 25%;
-  top: 7vh;
+  /* top: 7em; */
   color:aliceblue;
 }
 
 .main-cities h6{
-  font-size: 1.75rem;
+  font-size: var(--mediumfont);
   font-weight: 300;
   position: relative;
-  /* bottom: 8rem; */
+  bottom: 16vh;
   margin: auto;
+  border-bottom: rgba(240, 248, 255, 0.238) solid 3px;
+  width: fit-content;
+  opacity: 70%;
+}
+
+.main-cities h6:hover{
+  opacity: 100%;
 }
 
 /* section 3 */
@@ -629,9 +630,12 @@ article p{
 }
 
 #verdemap{
+  position: relative;
+  cursor: pointer;
   margin-right: 2rem;
-  margin-bottom: 7rem;
-  max-height: 80vh;
+  margin-bottom: 20vh;
+  bottom: 2rem;
+  max-height: 65vh;
   width: auto;
   border-radius: .7rem;
 }
@@ -655,7 +659,7 @@ article p{
 #main-end-book .book-button{
   height: fit-content;
   padding: 1rem 2rem;
-  margin: 4rem auto;
+  margin: 4rem auto 0;
 }
 
 /* about page */
@@ -776,7 +780,7 @@ article p{
   height: 100vh;
 }
 
-form{
+#contact-form{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   grid-auto-rows: fit-content;
@@ -863,12 +867,12 @@ button{
   flex-direction: column;
   padding: 3rem;
   height: fit-content;
-  /* max-height: 34rem; */
-  width: 22%;
-  max-width: 25rem;
+  position: relative;
+  top: 7vh;
+  width: 25%;
+  max-width: 30rem;
   margin: 2rem auto 0;
-  background:linear-gradient(to bottom, rgba(105, 184, 254, 0.633), rgba(255, 255, 255, 0.841));
-  backdrop-filter: blur(2rem);
+  background:linear-gradient(to bottom, rgba(87, 185, 255, 0.731), rgba(255, 255, 255, 0.193));
   box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
   border: rgb(189, 210, 225) solid 4px;
   border-radius: 1rem;
@@ -878,9 +882,11 @@ button{
 #calendar{
   position: relative;
   overflow: hidden;
-  margin: 2rem 0 0 7rem;
-  width: 75vw;
-  max-width: 50rem;
+  top: 7vh;
+  left: 10vh;
+  margin: auto;
+  width: 50vw;
+  max-width: 60rem;
   height: 74vh;
 }
 
@@ -929,8 +935,8 @@ button{
   color: aliceblue;
   font-size: 24px;
   position: relative;
-  top: 2rem;
-  left: 4rem;
+  top: 5vh;
+  left: 10vh;
 }
 
 .calendardesktop{
@@ -1138,10 +1144,11 @@ button{
   }
 
   #verdemap{
-    margin: 2rem auto;
+    margin: 0 auto 4em;
     width: 100%;
     max-width: 40rem;
     height: auto;
+    bottom: 7rem;
   }
   #cities-header h3{
     top: 0;
@@ -1198,6 +1205,8 @@ button{
     margin: auto;
     width: 90%;
     margin: auto;
+    top: 0;
+    left: 0;
   }
 
   .calendardesktop{
@@ -1263,4 +1272,7 @@ button{
     max-width: 40em;
   }
 
+  #sedona, #campverde{
+    bottom:0;
+  }
 }

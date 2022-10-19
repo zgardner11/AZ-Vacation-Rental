@@ -1,0 +1,17 @@
+
+Javascript
+
+- Client side validation of contact/booking form
+
+    - Name is more than 2 characters and less than 30
+    - Email is valid
+    - 
+
+- Server side validation of contact/booking form
+
+    - 
+
+- Weather API to show current weather in Cottonwood, AZ
+    - eventually integrate prediction of weather for dates booked
+
+- 

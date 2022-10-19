@@ -8,6 +8,69 @@ burger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 })
 
+const userName = document.getElementById('name-book');
+const userEmail = document.getElementById('email-book');
+const date = document.getElementById('date-book');
+const form = document.getElementById('contact-form');
+
+// tell user the inputs are not filled out correctly
+
+const showError = () => {
+
+  //get form-field element
+  const formField= input.parentElement;
+
+  //add error class to form-field div
+  formField.classList.remove('success');
+  formField.classList.add('error');
+  // add event listener for success class 
+
+  form.addEventListener('submit', )
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Payment functionality
 
 //(count number of days booked w/ active classes - 1)
