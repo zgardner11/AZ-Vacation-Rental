@@ -912,14 +912,10 @@ button{
   color:var(--navbar);
 }
 
-.date{
+.date-book{
   margin: 1rem auto 0;
   text-align: center;
   color: aliceblue;
-}
-
-.date:focus{
-  border: var(--green) solid 3px;
 }
 
 .dateend{
@@ -981,6 +977,14 @@ button{
 
 .form-entry.error small{
   visibility: visible;
+}
+
+.date-book.error{
+  border: var(--navbar) solid 3px;
+}
+
+.date-book.success{
+  border: var(--green) solid 3px;
 }
 
 #dash{
