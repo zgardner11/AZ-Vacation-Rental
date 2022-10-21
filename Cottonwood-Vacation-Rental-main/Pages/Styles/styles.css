@@ -4,14 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root{
-  --main-bg-color: linear-gradient( to bottom, var(--navbar), aliceblue);
-  --reverse-bg-color: linear-gradient( to top, var(--silverblue), aliceblue);
-  --alternate-bg-color: linear-gradient( to bottom, var(--silverblue), aliceblue);
+  --main-bg-color: linear-gradient( to bottom, var(--navbar), white);
+  --reverse-bg-color: linear-gradient( to top, var(--silverblue), white);
   --wine: #160035;
   --wine2:#0c001e;
   --orange:#652000;
   --navbar:#892c01;
-  --green: #001e04;
+  --darkgreen: #001e04;
+  --green:rgba(0, 70, 0, 0.513);
   --white:hsla(192, 10%, 90%, 0.979);
   --lightblue: #6fa8be;  
   --skyblue:hsla(192, 100%, 79%, 0.979);
@@ -82,6 +82,10 @@ a:visited{
 
 a:active{   /* emulates pressing of button in 3d space */
   top: 1px;
+}
+
+form{
+  font-family: 'Outfit', sans-serif;
 }
 
 /* navigation */
@@ -196,11 +200,13 @@ nav a:before {
   border-radius: 2rem;
   cursor: pointer;
 }
+
 .book-button.active{
   background-color: rgb(214, 75, 0);
   border-radius: 2rem;
   cursor: pointer;
 }
+
 nav .book-button{
   margin: auto 5rem auto 4rem;
 }
@@ -372,7 +378,7 @@ header > h3{
 }
 
 #main-card-two header, #main-card-two:hover{
-  background: var(--green);
+  background: var(--darkgreen);
   color: aliceblue;
 }
 
@@ -571,7 +577,7 @@ article p{
   font-weight: 100;
   position: relative;
   right: 25%;
-  /* top: 7em; */
+  top: 1em;
   color:aliceblue;
 }
 
@@ -748,6 +754,7 @@ article p{
   height: fit-content;
   position: relative;
   margin: auto;
+  background: var(--main-bg-color);
 }
 
 .contact-main header{
@@ -777,7 +784,7 @@ article p{
 }
 
 #contact-wrapper{
-  height: 100vh;
+  height: fit-content;
 }
 
 #contact-form{
@@ -787,14 +794,13 @@ article p{
   gap: 2rem;
   width: 90%;
   max-width: 35rem;
-  height: 44rem;
+  height: fit-content;
   padding: 4rem;
   margin: 3vh auto;
   backdrop-filter: blur(2rem);
   box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
   border: 4px rgba(255, 255, 255, 0.155) solid;
-  border-radius: 1rem;
-  font-family: 'Outfit', sans-serif;
+  border-radius: .8rem;
   font-weight: 100;
 }
 
@@ -813,10 +819,6 @@ input, textarea {
   border-radius: .4rem .2rem;
   background: transparent;
   font-size: 1rem;
-}
-
-input:required:focus{
-  border: rgb(168, 0, 0) solid 3px;
 }
 
 .contact-date{
@@ -859,7 +861,6 @@ button{
   display: flex;
   justify-content: center;
   height: fit-content;
-  /* margin: 0 2rem; */
 }
 
 #book{
@@ -876,7 +877,6 @@ button{
   box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
   border: rgb(189, 210, 225) solid 4px;
   border-radius: 1rem;
-  /* width: 100%; */
 }
 
 #calendar{
@@ -904,15 +904,6 @@ button{
   padding: 1rem;
 }
 
-/* #date-selection{
-  display: flex;
-  flex-direction: column;
-}
-
-#date-selection div{
-  margin: auto;
-} */
-
 #dates-interested h2{
   color:white;
 }
@@ -927,6 +918,10 @@ button{
   color: aliceblue;
 }
 
+.date:focus{
+  border: var(--green) solid 3px;
+}
+
 .dateend{
   margin: 1rem auto 0;
 }
@@ -937,6 +932,8 @@ button{
   position: relative;
   top: 5vh;
   left: 10vh;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
 }
 
 .calendardesktop{
@@ -947,16 +944,50 @@ button{
   display: none;
 }
 
+.form-entry{
+  position: relative;
+  padding-bottom: 2rem;
+  /* border: black solid 2px; */
+}
+
+.form-entry i{
+  position: absolute;
+  top: 3.5rem;
+  right: .5rem;
+  visibility: hidden;
+}
+
+.form-entry small{
+  visibility: hidden;
+ }
+
+.form-entry.success input{
+  border-color: var(--green);
+}
+
+.form-entry.error input{
+  border-color: var(--navbar);
+}
+
+.form-entry.success i.fa-check{
+  color: var(--green);
+  visibility: visible;
+}
+
+.form-entry.error i.fa-circle-xmark{
+  color: var(--navbar);
+  visibility: visible;
+}
+
+.form-entry.error small{
+  visibility: visible;
+}
+
 #dash{
   color: var(--navbar);
   text-align: center;
   width: 100%;
   font-size: 3rem;
-}
-
-#email-book{
-  /* border: black solid 2px; */
-  margin: 2rem auto;
 }
 
 /* tablet responsiveness */

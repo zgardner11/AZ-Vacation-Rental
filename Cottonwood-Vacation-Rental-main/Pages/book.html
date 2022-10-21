@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cottonwood Vacation Rental</title>
         <link rel="stylesheet" href="Styles/styles.css">
-        <script src = "JS/payment.js" defer></script>
         <script src="JS/main.js" defer></script>
+        <script src="https://kit.fontawesome.com/3bfa9b01f8.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav id="navbar">
@@ -48,25 +48,35 @@
                         <h3>$199/night</h3>
                     </header> 
                     <div class = "date-selection">
-                        <form action="">
-                        <div id="name-book">
-                            <label for="name" class = "form-entry">Name</label>
-                            <input type="text" name = "name" required>
-                        </div>
-                        <div id="email-book" class = "form-entry">
-                            <label for="email">Email</label>
-                            <input type="email" name = "email" required>
-                        </div>
-                        <div id = "date-book" class="form-entry">
-                            <input type="date" class = "date">
-                            <div id = "dash">-</div>
-                            <input type="date" class = "date dateend">
-                        </div>
-                    </div>
-                    <div id="contactbutton" class = "bookpage">
-                        <a href = "book.html" class = "book-button">Reserve Now</a>
-                    </div>
-                    <p id = "bookdisclaimer">*You will not be charged anything at this time. This sends us an email with your reservation dates and we will contact you directly for secure payment. Thank you!</p>
+                        <form id = "form-book">
+                            <div class = "form-entry">
+                                <label for="name">Name*</label>
+                                <input type="text" id="name-book"/>
+                                <i class="fa-solid fa-check"></i>
+                                <i class="fa-regular fa-circle-xmark"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class = "form-entry">
+                                <label for="email">Email*</label>
+                                <input type="email" id="email-book"/>
+                                <i class="fa-solid fa-check"></i>
+                                <i class="fa-regular fa-circle-xmark"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-entry">
+                                <label for="date">Dates Interested*</label>
+                                <input type="date" class = "date date-book"/>
+                                <div id = "dash">-</div>
+                                <input type="date" class = "date date-book dateend">
+                            </div>
+        
+                            <div id="contactbutton" class = "bookpage">
+                                <button class = "book-button">Reserve Now</button>
+                            </div>
+
+                            <p id = "bookdisclaimer">*You will not be charged anything at this time. This sends us an email with your reservation dates and we will contact you directly for secure payment. Thank you!</p>
                     </form>
                 </div>
             </article>

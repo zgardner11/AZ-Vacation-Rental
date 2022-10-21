@@ -8,118 +8,77 @@ burger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 })
 
+//availability booking
+
+const formBook = document.getElementById('form-book');
 const userName = document.getElementById('name-book');
 const userEmail = document.getElementById('email-book');
-const date = document.getElementById('date-book');
-const form = document.getElementById('contact-form');
+const date = document.getElementsByClassName('date-book');
+
+
+//add listener for form to check inputs before submitting
+
+formBook.addEventListener("submit", e => {
+  //prevents form from submitting
+  e.preventDefault();
+
+  checkInputs();
+});
 
 // tell user the inputs are not filled out correctly
 
-const showError = () => {
+function checkInputs (){
+  //get values from inputs and add trim to clear whitespace
 
-  //get form-field element
-  const formField= input.parentElement;
+  const usernameValue = userName.value.trim();
+  const useremailValue = userEmail.value.trim();
+  const dateValue = date.value;
 
-  //add error class to form-field div
-  formField.classList.remove('success');
-  formField.classList.add('error');
-  // add event listener for success class 
-
-  form.addEventListener('submit', )
-
-
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Payment functionality
-
-//(count number of days booked w/ active classes - 1)
-
-   // let nightsBooked = '';
-     // console.log(nightsBooked);
-     
-let nightsBooked = document.querySelectorAll(".active").length;
-const rentalRate = 199;
-const totalPrice = rentalRate * 1;
-
-function initPayPalButton() {
-    paypal.Buttons({
-      style: {
-        shape: 'pill',
-        color: 'gold',
-        layout: 'vertical',
-        label: 'paypal',             
-      },
-
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{
-              "amount":{"currency_code":"USD","value":totalPrice}
-            }]
-        });
-      },
-
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(orderData) {
-          
-          // Full available details
-          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-          // Show a success message within this page, e.g.
-          const element = document.getElementById('paypal-button-container');
-          element.innerHTML = '';
-          element.innerHTML = '<h3>Thank you for your payment!</h3>';
-
-          // Or go to another URL:  actions.redirect('thank_you.html');
-          
-        });
-      },
-
-      onError: function(err) {
-        console.log(err);
-      }
-    }).render('#paypal-button-container');
+  if(usernameValue === ''){
+    // show error
+    // add error class
+    setError(userName, 'Name cannot be blank.'); 
+  } else{
+    // add success class
+    setSuccess(userName);
   }
 
-  initPayPalButton();
+  if(useremailValue === ''){
+    // show error
+    // add error class
+    setError(userEmail, 'Please enter a valid email.'); 
+  } else{
+    // add success class
+    setSuccess(userEmail);
+  }
+
+  if(dateValue === ''){
+    // show error
+    // add error class
+    setError(date, 'Please enter a valid email.'); 
+  } else{
+    // add success class
+    setSuccess(date);
+  }
+};
+
+function setError(input, message) {
+  const formEntry = input.parentElement; //declare variable for parent div of input (.form-entry)
+  const small = formEntry.querySelector('small');
+  //add error message inside small tag
+  small.innerText = message;
+  //add error class
+  formEntry.className = 'form-entry error';
+};
+
+//add functionality so class automatically updates to success when user types in more than 2 characters for name and email is validated
+
+function setSuccess(input) {
+  const formEntry = input.parentElement;
+  formEntry.className = 'form-entry success';
+}
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
 
