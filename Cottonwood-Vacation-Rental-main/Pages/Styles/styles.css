@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root{
-  --main-bg-color: linear-gradient( to bottom, var(--navbar), white);
+  --main-bg-color: linear-gradient( to bottom, var(--navbar), var(--silverblue));
   --reverse-bg-color: linear-gradient( to top, var(--silverblue), white);
   --wine: #160035;
   --wine2:#0c001e;
@@ -32,6 +32,10 @@
   box-sizing: border-box; /*accounts for margin and padding in sizing, easier to size */
   margin: 0;
   padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -269,6 +273,7 @@ nav .book-button{
   position: relative;
   color: var(--silverblue);
   background: var(--reverse-bg-color);
+  scroll-behavior: smooth;
 }
 
 .content-three{
@@ -434,8 +439,10 @@ article p{
 
 .main-wine-wrapper{
   display: grid;
+  position: relative;
+  bottom: 15vh;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-auto-rows: 22rem;
+  grid-auto-rows: 25rem;
   align-items: center;
   justify-content: center;
   gap: 1rem;
@@ -446,12 +453,13 @@ article p{
 }
 
 .main-wine{
+  display: flex;
+  flex-direction: column;
   position: relative;
   background-color: aliceblue;
   margin: auto;
   width: 90%;
-  height: 20rem;
-  row-gap: 5rem;
+  height: fit-content;
   box-shadow: 0 .1rem .4rem rgba(255, 255, 255, 0.631);
   transition: background-color 500ms ease-in-out;
   z-index: 2;
@@ -474,15 +482,18 @@ article p{
   align-items: center;
   justify-content: center;
   position: relative;
-  bottom: 1.1rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background: var(--wine); 
   min-height: 3rem;
   width: 100%;
   color:aliceblue;
   border: aliceblue solid 1px;
-  border-radius: .8rem;
+  border-radius: .8rem 0 2rem 0;
   z-index: 4;
+}
+
+.border.border1{
+  border-radius: .2em .2em 1em 1em;
 }
 
 .main-wine h4{
@@ -492,8 +503,8 @@ article p{
 .main-wine p{
   position: relative;
   margin: auto;
-  bottom: 3.8rem;
-  padding: 1.1rem;
+  /* bottom: 3.8rem; */
+  padding: 1rem 2rem;
   font-size: var(--smallfont);
   line-height: 1.2;
   font-weight: 300;
@@ -502,17 +513,18 @@ article p{
 }
 
 .main-wine img{
+  align-self: flex-start;
   position: relative;
-  bottom: 3.5rem;
+  /* bottom: 5rem; */
   width: 100%;
-  height: 11rem;
+  height: 175px;
   border-radius: .4rem;
 }
 
 .cities-wrapper{
   /* padding-top: 2rem; */
   position: relative;
-  top: 4rem;
+  top: 2rem;
   display: flex;
   margin: 4rem auto;
   max-width: 85vw;
@@ -525,6 +537,8 @@ article p{
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-auto-rows: 30vh;
   gap: 2em 4em;
+  position: relative;
+  bottom: 3rem;
   height: fit-content;
   width: 45vw;
   text-align: center;
@@ -541,14 +555,14 @@ article p{
   );
   height: 25vh;
   background-size: cover;
-  border-radius: .4rem;
-  border: aliceblue solid 1px;
-  transition: ease-in-out border-radius 400ms, opacity 500ms ease-in-out;
+  border-radius: .3rem;
+  transition: ease-in-out border-radius 350ms, opacity 300ms ease-in-out, color 250ms ease-in-out;
 }
 
 .main-cities:hover{
   border-radius: 2rem;
   opacity: 80%;
+  color: rgb(18, 0, 117);
 }
 
 #cottonwood{
@@ -567,9 +581,9 @@ article p{
   background-image: url("Images2/campverde.jpg"); 
 }
 
-#sedona, #campverde{
+#cottonwood, #jerome{
   position: relative;
-  bottom: 6rem;
+  bottom: 1.5rem;
 }
 
 #cities-header h3{
@@ -665,7 +679,7 @@ article p{
 #main-end-book .book-button{
   height: fit-content;
   padding: 1rem 2rem;
-  margin: 4rem auto 0;
+  margin: auto;
 }
 
 /* about page */
@@ -753,7 +767,6 @@ article p{
 .contact-main{
   height: fit-content;
   position: relative;
-  margin: auto;
   background: var(--main-bg-color);
 }
 
@@ -796,7 +809,7 @@ article p{
   max-width: 35rem;
   height: fit-content;
   padding: 4rem;
-  margin: 3vh auto;
+  margin: 3vh auto 0;
   backdrop-filter: blur(2rem);
   box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
   border: 4px rgba(255, 255, 255, 0.155) solid;
@@ -806,6 +819,7 @@ article p{
 
 label{
   font-size: var(--smallfont);
+  color: white;
   /* font-weight: 300; */
 } 
 
@@ -835,8 +849,7 @@ form p{
 
 button{
   background: none;
-  border: 1px rgba(255, 255, 255, 0.462) solid;
-  border-radius: 1rem;
+  border: none;
 }
 
 #contactbutton{
@@ -883,7 +896,7 @@ button{
   position: relative;
   overflow: hidden;
   top: 7vh;
-  left: 10vh;
+  left: 15vh;
   margin: auto;
   width: 50vw;
   max-width: 60rem;
@@ -904,6 +917,16 @@ button{
   padding: 1rem;
 }
 
+#calendar-wrap h3{
+  color: aliceblue;
+  font-size: 24px;
+  position: relative;
+  top: 5vh;
+  left: 15vh;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
+}
+
 #dates-interested h2{
   color:white;
 }
@@ -920,16 +943,6 @@ button{
 
 .dateend{
   margin: 1rem auto 0;
-}
-
-#calendar-wrap h3{
-  color: aliceblue;
-  font-size: 24px;
-  position: relative;
-  top: 5vh;
-  left: 10vh;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 200;
 }
 
 .calendardesktop{
@@ -1198,7 +1211,7 @@ button{
   }  
 
   .cities{
-    gap: 0;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     height: fit-content;
@@ -1307,7 +1320,7 @@ button{
     max-width: 40em;
   }
 
-  #sedona, #campverde{
+  #cottonwood, #jerome{
     bottom:0;
   }
 }
