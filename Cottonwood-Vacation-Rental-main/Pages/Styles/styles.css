@@ -253,7 +253,6 @@ nav .book-button{
 
 .content header{
   position: relative;
-  width: 100%;
   margin: auto;
 }
 
@@ -315,9 +314,9 @@ header > h3{
   display: grid;
   flex-wrap: nowrap;
   flex-direction: column;
-  margin: 5rem auto;
+  margin: 4rem auto;
   grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr)); 
-  gap: 2rem;
+  gap: 4rem;
   max-width: 74%;
 }
 
@@ -329,12 +328,11 @@ header > h3{
   background-color:rgba(207, 233, 255, 0.74);
   color:var(--wine);
   backdrop-filter: blur(20px);
-  border-radius: 4px;
   box-shadow: .5rem 2px .5rem rgba(53, 53, 53, 0.2);
   transition: background-color 500ms ease-out;
   z-index: 2;
-  border-radius: .8rem;
-  border: rgb(211, 211, 211) solid 1px;
+  border-radius: 10px 10px 20px 20px;
+  border: rgb(211, 211, 211) solid 2px;
 }
 
 .main-card:hover{
@@ -342,39 +340,37 @@ header > h3{
   cursor: pointer;
 }
 
-.main-card header{
+.main-card-header{
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
-  bottom: 26.5vh;
   color:aliceblue;
+  width: 67%;
   z-index: 4;
-  min-height: 7vh;
-  width: 56%;
+  min-height: fit-content;
+  padding: 1rem;
   background: var(--silverblue); 
-  border: rgb(225, 241, 255) solid 1px;
-  border-radius: .7rem;
+  border-radius: 20px 20px 4px 4px;
 }
 
 .main-card p{
   margin: auto;
   position: relative;
-  bottom: 2rem;
   font-size: var(--textfont);
   line-height: 1.5;
   font-weight: 200;
   max-width: 90%;
+  padding: 2rem 1rem;
 }
 
 .main-card img{
   border-radius: .4rem;
   position: relative;
   align-self: baseline;
-  max-height: 22vh;
+  max-height: 11em;
   max-width: fit-content;
   margin: 0 auto; 
-  border: aliceblue solid 1px;
 }
 
 #main-card-one:hover{
@@ -382,12 +378,12 @@ header > h3{
   color: aliceblue;
 }
 
-#main-card-two header, #main-card-two:hover{
+.card-local, #main-card-two:hover{
   background: var(--darkgreen);
   color: aliceblue;
 }
 
-#main-card-three header, #main-card-three:hover{
+.card-wine, #main-card-three:hover{
   background: var(--wine);
   color: aliceblue;
 }
@@ -488,12 +484,8 @@ article p{
   width: 100%;
   color:aliceblue;
   border: aliceblue solid 1px;
-  border-radius: .8rem 0 2rem 0;
+  border-radius: 1em 1em .2em .2em;
   z-index: 4;
-}
-
-.border.border1{
-  border-radius: .2em .2em 1em 1em;
 }
 
 .main-wine h4{
@@ -680,6 +672,8 @@ article p{
   height: fit-content;
   padding: 1rem 2rem;
   margin: auto;
+  position: relative;
+  bottom: 3rem;
 }
 
 /* about page */
